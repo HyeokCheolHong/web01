@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<h2>회원관리 로그인 폼</h2>
+	<form method="post" action="#">
+		<!-- 
+		1. form태그안에서 입력한 자료는 서버로 전송된다. method속성은 자료를 서버로 보내는 법을 지정한다.
+		2. method방식 종류
+			가. get방식 : method속성을 생략하면 기본값이 get방식이다. get방식은 서버로 보내는 자료길이 제한이 있고, 
+			                         웹브라우저 주소창에 서버로 전송되는 자료가 노출되어서 보안이 좋지않다.
+			                         그리고 파일 첨부되는 자료실 기능도 get으로 안된다.
+			                         주소창에서 노출되는 get방식 형태는 *.jsp(매핑주소)?네임파라미터이름=값 으로 노출되어서 네임파라미터이름에 값을 담아서 서버로 전달하므로 보안이 안좋다
+			나. post방식 : 서버로 보내는 자료가 본문 내용속에 포함되어 져서 전송되기 때문에 노출이 안되어서 보안이 좋다.
+			                            보내는 자료 길이 제한도 없다.
+			                            파일 첨부되는 자료실 기능도 만들 수 있다
+		3. action속성값에 서버파일을 지정한다.
+		 -->
+		<table border="1">
+			<tr>
+				<th>아이디</th>
+				<td>
+					<input type="text" name="mem_id" id="mem_id" placeholder="아이디를 입력하세요" size="14"/>
+					<!-- input태그의 size속성은 입력박스 길이, type속성값의 text는 한줄 입력필드(박스)를 만든다.-->
+				</td>
+				<th rowspan="2">
+					<input type="submit" value="로그인"/>
+					<!-- input태그의 type속성값 submit은 입력한 자료인 로그인 아이디, 비번을 서버로 전송한다. -->
+				</th> <!-- rowspan="2"는 2개의 행을 합침 -->
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td><input type="password" name="mem_pwd" id="mem_pwd" placeholder="비밀번호를 입력하세요" size="14"/></td>
+				<!-- password는 입력박스에 입력한 값을 암호화(*)표시 한다. -->
+			</tr>
+			<tr>
+				<th colspan="3"> <!-- colspan="3" 은 3개열을 합침 -->
+				<button type="button">아이디 찾기</button>
+				<input type="button" value="비번찾기">
+				<input type="button" value="회원가입">
+				</th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

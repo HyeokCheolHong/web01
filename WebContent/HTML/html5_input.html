@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>html5에서 추가된 다양한 입력방식</title>
+</head>
+<body>
+	<form action="#" method="post">
+		이메일 : <input type="email" name="email" autocomplete="user-email"/><br/>
+		url : <input type="url" name="url"/><br/>
+		전화번호 : <input type="tel" name="tel"/><br>
+		색상 : <input type="color" name="color"/><br>
+		월 : <input type="month" name="month"/><br>
+		날짜 : <input type="date" name="date"/><br>
+		시간 : <input type="time" name="time"/><br>
+		숫자 : <input type="number" name="number" min="1" max="10" step="2"/><br> <!-- min속성은 최소, max속성은 최대, step은 증감값 -->
+		범위 : <input type="range" name="range" min="1", max="10" step="2"/><br>
+		전송 : <input type="submit" value="전송"/><br>
+		초기화 : <input type="reset" value="취소"/><br> <!-- reset은 입력필드 값 초기화 -->
+		
+	</form>
+</body>
+</html>

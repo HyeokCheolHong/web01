@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+/* index.jsp ui */
+body {
+  background-color: #898989; 
+  /* 본문 배경색 */
+
+  margin: 0px;
+  /* 바깥여백 0 */
+  padding: 0px;
+  /* 안쪽여백 0 */
+
+  font-size: 0.75em;;
+  /* 글자크기 부모사이즈대비 0.75배 */
+  line-height: 1.2em;
+  /* 수직 정렬 */
+
+  color: #333;
+  /* #333 16진수 색상코드는 #333333을 줄여서 표현한 것 */
+}
+
+#wrap {
+  width: 971px;
+  margin: 0px auto;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/shadow.png);
+  background-repeat: repeat-y;
+  /* y축으로 반복 */
+  min-height: 940px;
+  /* 최소 높이 지정 */
+}
+
+#logo {
+  float: left;
+  /* 왼쪽정렬 */
+  width: 265px;
+  margin: 60px 0px 0px 40px;
+
+}
+
+header{
+  height: 151px;
+}
+
+nav{
+  width: 600px;
+  margin: 70px 20px 0px 0px;
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  font-weight: 100;
+  color: #333;
+}
+
+nav ul li {
+  float: left;
+  margin: 0px 5px;
+}
+
+nav a{
+  display: block;
+  height: 20px;
+  padding: 10px;
+
+}
+
+nav a:hover{
+  background-image: url(../images/blue.gif);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+#login{
+  float: right;
+  margin: 20px 64px 0px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  word-spacing: 5px;
+  /* 단어 사이의 간격 */
+}
+
+#login a{
+  text-decoration: none;
+  color: #333;
+}
+
+#login a:hover{
+  color: #F90;
+  /* #F90은 #FF9900을 줄여서 표현 */
+}
+
+.clear{
+  clear: both;
+  /* float속성을 제거하여 빈공객 영역으로 수평정렬되어서 ui깨지는 것을 막아 준다. */
+}
+
+/* 메인 이미지 */
+#main_img{
+  width: 971px;
+  height: 300px;
+  background-image: url(../images/img_back.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+#main_img img{
+  margin: 9px 0px 0px 0px;
+}
+
+/* index.jsp 메인 ui */
+article#main_cont{
+  margin: 5px 0px 5px 0px;
+}
+
+#solution{
+  border: 1px solid red;
+  border-radius: 10px;
+  width: 910px;
+  min-height: 100px;
+  background: #EBEBEB;
+  padding: 10px;
+}
+
+#hosting,#security,#payment{
+  float: left;
+  width: 30px;
+  padding: 10px;
+}
+
+#hosting h3, #security h3, #payment h3{
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+#hosting p, #security p, #payment p{
+  font-size: 12px;
+  color: #333;
+}
+
+#hosting{
+  background-image: url(../images/icon1.png);
+  background-repeat: no-repeat;
+  background-position: left 15px;
+  border-right: 1px solid #ccc;
+}
+
+#security{
+  background-image: url(../images/icon2.png);
+  background-repeat: no-repeat;
+  background-position: left 15px;
+  border-right: 1px solid #ccc;
+}
+
+#payment{
+  background-image: url(../images/icon3.png);
+  background-repeat: no-repeat;
+  background-position: left 15px;
+  border-right: 1px solid #ccc;
+}
+
+#sec_news, #news_notice{
+  float: left;
+  width: 420px;
+  margin: 15px 0px 0px 40px;
+}

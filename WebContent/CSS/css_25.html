@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body {
+			/* 상하좌우 바깥/안 여백을 0픽셀로 처리 */
+			margin: 0px;
+			padding: 0px; 
+		}
+		p {
+			margin: 0px; /* 상하좌우 바깥 여백을 0픽셀로 처리 */
+			padding: 0px;
+			border: 1px solid red;
+			background-color: yellow;
+			
+			&#target {
+				background: red;
+				margin: 10px;
+				padding: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<p>margin: 0px, padding: 0px; 인 단락입니다.</p>
+	<p id="target">margin: 10px, padding: 20px; 인 단락입니다.</p>
+</body>
+</html>

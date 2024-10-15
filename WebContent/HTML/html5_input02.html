@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form action="#" method="post">
+		<table border="1">
+			<tr>
+				<th colspan="2">다양한 입력양식</th>
+			</tr>
+			
+			<tr>
+				<th>성별:</th>
+				<td>
+					<input type="radio" name="gender" value="male" >남자 <!-- type 속성값인 radio는 그룹중 하나만 선택할 수 있는 버튼 -->
+					<input type="radio" name="gender" value="female" checked>여자 <!-- checked속성은 미리 선택함 -->
+				</td>
+			</tr>
+			
+			<tr>
+				<th>과일 선택:</th>
+				<td>
+					<input type="checkbox" name="fruit" value="apple" checked>사과 <!-- check박스는 그룹중 하나 이상의 선택이 가능함 -->
+					<input type="checkbox" name="fruit" value="banana">바나나
+					<input type="checkbox" name="fruit" value="grape">포도
+				</td>
+			</tr>
+			
+			<tr>
+				<th>고객 의견:</th>
+				<td>
+					<textarea rows="5" cols="50" name="feedback"></textarea>
+				</td>
+			</tr>
+			
+			<tr>
+				<th colspan="2">
+					<input type="image" src="../images/submit.png" alt="제출 버튼" style="background-color:gray; border:1px solid gray;" width="20"; height="20">
+					<!-- type="image"는 그림 삽입효과와 입력자료를 서버로 전송해주는 기능이 있다. 마우스 호버 하면 화살표 마우스 포인터가 손가락 모양으로 변경된다. -->
+					<button type="submit"><img alt="제출 버튼" src="../images/submit.png" width="20"; height="20"></button>
+					<input type="Reset" value="취소"> <!-- reset은 입력박스 입력값을 초기화 -->
+				</th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

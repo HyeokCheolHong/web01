@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		a{
+			&.style01 {
+				&:link {
+					color: #FF0000;
+				}
+				&:visited {
+					color: #0000FF;
+				}
+				&:hover {
+					font-size: 150%; /* 폰트 크기 단위가 %면 상대적 크기 단위이다. 마우스 오버하면 글자 크기가 1.5배 커진다. */
+				}
+			}
+			
+			&.style02 {
+				&:link {
+					color: yellow;
+				}
+				&:visited {
+					color: gold;
+				}
+				&:hover {
+					background-color: #666666; 
+				}
+				
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>하이퍼링크 마우스 오버시 스타일이 변경</h2>
+	<p>
+		<a href="#" class="style01" target="_blank">폰트 크기를 변경하는 링크</a>
+	</p>
+	<p>
+		<a href="#" class="style02" target="_blank">배경색을 변경하는 링크</a>
+	</p>
+</body>
+</html>

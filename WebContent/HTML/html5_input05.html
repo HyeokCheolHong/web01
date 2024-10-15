@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form action="#" method="post">
+		이메일 : <input type="email" name="email" required/><br/>
+		<!-- required 속성 : 브라우저가 입력한 값이 유효한 이메일 주소인지 기본으로 검증 -->
+		웹사이트 주소 : <input type="url" name="url" required/><br/>
+		전화번호 : <input type="tel" name="tel" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="###-####-####"/><br/>
+		<!-- pattern 속성에 지정한 정규표현식의 의미는 [0부터 9사이의 정수][n번 반복] -->
+		신발 사이즈 : <input type="number" min="230" max="290" step="10" values="260" /> <br/>
+		<!-- min : 최소값, max는 최대값, step은 증감값, value는 초기값 -->
+		테니스 스킬 : <input type="range" min="1" max="10" value="5"/><br/>
+		<input type="submit" value="전송">
+		<input type="reset" value="취소">
+	</form>
+</body>
+</html>

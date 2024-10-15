@@ -1,0 +1,121 @@
+/* welcome.jsp ui */
+
+#sub_img{
+  width: 971px;
+  height: 179px;
+  background-image: url(../images/company/sub_back.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+#sub_menu{
+  width: 238px;
+  float: left;
+  margin: 20px;
+  border: 0px solid #ccc;
+  font-size: 1em;
+}
+
+#sub_menu ul{
+  list-style: none;
+  margin: 20px 0px 0px 10px;
+}
+
+#sub_menu ul li a{
+  text-emphasis: none;
+  color: #666;
+  display: block;
+  height: 15px;
+  width: 150px;
+  padding: 7px;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: #999;
+  background-image: url(../images/bullet.gif);
+  background-repeat: no-repeat;
+  background-position: right center;
+  text-decoration: none;
+}
+
+#sub_menu ul li a:hover{
+  color: #F90;
+  background-image: url(../images/bullet_orange.gif);
+  background-repeat: no-repeat;
+  background-position: right center;
+
+}
+
+/* welcome.jsp 서브 메인 본문 ui */
+#sub_main_cont{
+  width: 675px;
+  border: 0px solid #ccc;
+  float: right;
+  margin-right: 15px;
+}
+
+#sub_main_cont h1{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 45px;
+  color: #ccc;
+  margin: 20px 0px;
+  font-weight: normal;
+}
+
+#sub_main_cont p{
+  padding-left: 10px;
+}
+
+figure.CEO{
+  float: right;
+  /* CEO사진은 오른쪽에 배치되고 문자는 자연스럽게 이미지를 감싸면서 배치 */
+}
+
+figcaption.CEO_explain{
+  text-align: center;
+  color: #39F;
+  font-weight: bold;
+
+}
+
+/* history.jsp 메인 본문 ui */
+#sub_main_cont .y2023, #sub_main_cont .y2022, #sub_main_cont .y2021{
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #999;
+}
+
+#sub_main_cont .y2023 h3, #sub_main_cont .y2022 h3, #sub_main_cont .y2021 h3{
+  font-size: 25px;
+}
+
+#sub_main_cont .y2023 dt, #sub_main_cont .y2022 dt, #sub_main_cont .y2021 dt{
+  float: left;
+  text-transform: capitalize;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 15px;
+  color: #39F;
+  padding-top: 3px;
+  margin: 0px;
+}
+
+#sub_main_cont .y2023 dd, #sub_main_cont .y2022 dd, #sub_main_cont .y2021 dd{
+  background-image: url(../images/company/h_bullet.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 15px;
+  line-height: 2em;
+  /* 수직간 간격 지정 및 수직정렬 */
+}
+
+#sub_main_cont .y2023 dl, #sub_main_cont .y2022 dl, #sub_main_cont .y2021 dl{
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: #ccc;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 10px 0px;
+}
+
+#sub_main_cont dl.dot_none {
+  border-bottom: none;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		a {
+			&:link { /* 하이퍼링크 css 효과 */  
+				color: red;
+				text-decoration: none; /* 텍스트에 꾸며진 설정 제거 */
+			}
+			&:visited { /* 하이퍼링크 한 번이라도 클릭한(방문한) 후 css 효과 */
+				color: gold;
+			}
+			&:hover { /* 하이퍼링크에 마우스 올려놓을 때 css 효과 */
+				color: gray;
+				text-decoration: underline; /* 텍스트에 밑줄 표시하기 */
+			}
+			&:active { /* 하이퍼링크 클릭하는 순간 css 효과 */
+				color: yellow;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 
+		하이퍼링크 태그 특징
+		1. 하이퍼링크가 걸리면 기본적으로 밑줄선이 만들어지고, 마우스 오버시 화살표 마우스포인터가 손가락 모양으로 변경된다.
+		
+		target 속성은 하이퍼링크를 어느 창에 띄울 것인지 정한다. _blank : 새 탭
+		href="#"로 설정한 이유는 자바스크립트 이벤트나 css ui 효과를 확인하기 위해서 다른 주소 또는 파일로 이동을 막은 것이다.
+	-->
+	<a href="#" target="_blank">여기가 링크</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body {
+	background-color: yellow;
+	font: serif 30px italic;
+	color: black;
+}
+
+h1{
+	border-bottom: 1px solid gray;
+	color: red;
+	
+}
+
+p.first{
+	color: orange;	
+}
+
+p.second{
+	color: blue;
+}
+
+.coffee_image{
+	width: 200px;
+	height: 200px;
+}
+
