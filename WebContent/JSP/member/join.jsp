@@ -59,7 +59,7 @@
 
     <div id="buttons">
       <input type="submit" value="Submit" class="submit"/>
-      <input type="reset" value="Cancel" class="submit"/>
+      <input type="reset" value="Cancel" class="cancel"/>
     </div>
   </form>
 </article>

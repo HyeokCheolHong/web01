@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let x, y;
+      var input;
+
+      input = window.prompt('정수 입력하시오.', '정수숫자만 입력');
+      // prompt() 자바스크립트 내장함수는 메시지를 닫고 입력필드를 가진 창을 만든다.
+      // 확인 클릭하면 입력필드에 입력한 값을 문자열로 반환하고,
+      // 취소 클릭하면 null을 반환한다.
+
+      window.alert(input);
+      if (input != null) {
+        x = parseInt(input);
+      }
+
+      input = prompt('두번째 정수 입력하시오.', '정수숫자만입력');
+      alert(input);
+
+      if (input != null) {
+        y = parseInt(input);
+      }
+
+      document.write(x + ' + ' + y + ' = ' + (x + y) + '<hr/>');
+    </script>
+  </body>
+</html>
