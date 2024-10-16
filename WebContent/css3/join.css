@@ -8,3 +8,37 @@
   background-repeat: no-repeat;
   background-position: left top;
 }
+
+#join{
+  width: 670px;
+  margin: 10px 0px 0px 0px;
+}
+
+#join fieldset{
+  border: none;
+  padding: 10px 0px 20px 5px;
+}
+
+#join fieldset legend{
+  font-size: 20px;
+  border-bottom: 1px dotted #666;
+  width: 600px;
+  padding: 10px 0px;
+}
+
+#join fieldset label{
+  float: left;
+  width: 140px;
+  margin: 5px 0px;
+}
+
+#join fieldset input{
+  margin: 5px 0px;
+  border: 1px solid #999;
+  background-color: #FCFDEA;
+}
+
+#join fieldset input.id{
+  width: 100px;
+  height: 18px;
+}
