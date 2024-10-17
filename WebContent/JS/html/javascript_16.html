@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 switch~case</title>
+  </head>
+  <body>
+    <script>
+      let grade = window.prompt(
+        '학점을 입력하세요.',
+        'A-F학점 사이 문자로 입력'
+      );
+
+      if (grade == null) {
+        alert('학점을 입력하세요.');
+      } else {
+        grade = grade.toUpperCase(); // 대문자로 변환
+        alert(grade);
+
+        switch (grade) {
+          case 'A':
+            alert('A 학점: Excellent!');
+            break;
+          case 'B':
+            alert('B 학점: Good!');
+            break;
+          case 'C':
+            alert('C 학점: Satisfactory!');
+            break;
+          case 'D':
+            alert('D 학점: Passable!');
+            break;
+          case 'F':
+            alert('F 학점: Failed!');
+            break;
+          default:
+            alert('학점이 아닙니다.');
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

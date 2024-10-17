@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let computerNumber = Math.floor(Math.random() * 100);
+      let nGuess = 0;
+
+      function guess() {
+        let result = ''; // 결과메시지
+        let number = parseInt(document.getElementById('user').value);
+        nGuess++;
+
+        if (number == computerNumber) {
+          result = '축하합니다! ' + nGuess + '번만에 맞혔습니다.';
+        } else if (number < computerNumber) {
+          result = '더 높은 숫자를 입력해주세요!';
+          document.getElementById('user').focus();
+          // user 입력창에 focus(사용자 사용)
+        } else {
+          result = '더 낮은 숫자를 입력해주세요!';
+          document.getElementById('user').focus(); // user 입력창에 focus(사용자 사용)
+        }
+
+        document.getElementById('result').value = result; // 결과를 id가 "result"의 값으로 출력
+        document.getElementById('guesses').value = nGuess; //
+      }
+    </script>
+  </head>
+  <body>
+    <h2>숫자 맞추기 게임</h2>
+    이 게임은 주어진 숫자를 사용자가 입력한 숫자로 맞추는 게임입니다. 숫자는
+    1부터 100사이에 있습니다
+    <form action="#">
+      숫자 : <input type="text" id="user" size="6" /> <br />
+      <input type="button" value="확인" onclick="guess()" /> <br />
+      <hr />
+      추측휫수 : <input type="text" id="guesses" size="7" /> <br />
+      힌트 : <input type="text" id="result" size="20" />
+    </form>
+  </body>
+</html>

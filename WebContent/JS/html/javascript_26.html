@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>자바스크립트 연관배열을 활용한 폼임력필드 초기화</h3>
+    <form action="#" name="myform">
+      필드1 : <input type="text" name="a0" size="10" /><br />
+      필드2 : <input type="text" name="a1" size="10" /><br />
+      필드3 : <input type="text" name="a2" size="10" />
+      <hr />
+      <button type="button" onclick="init();">입력필드 초기화</button>
+    </form>
+
+    <script>
+      function init() {
+        for (let i = 0; i < 3; i++) {
+          document.myform['a' + i].value = i; // a0, a1, a2,..., a9 ���기화
+        }
+      }
+    </script>
+  </body>
+</html>

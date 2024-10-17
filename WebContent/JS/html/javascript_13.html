@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function calc() {
+        // function 키워드로 calc() 사용자 정의 함수명을 정의
+        let x = document.getElementById('x').value;
+        // 문서의 ID가 'x'인 것의 '값'을 가져와 변수 x에 저장
+        let y = document.getElementById('y').value;
+
+        let sum = Number(x) + Number(y);
+        // document.getElementById('sum') : 문서의 ID가'sum'인 것의 HTML 요소를 가져온다
+        // Number() : 문자열을 숫자로 변환
+        // let sum = parseInt(x) + parseInt(y);
+        // parseInt() : 문자열을 10진수로 변환
+        document.getElementById('sum').value = sum;
+        // '합계' input요소의 '값'을 sum으로 설정
+      }
+    </script>
+  </head>
+  <body>
+    <h2>덧셈 계산기</h2>
+    <form action="#" method="post">
+      첫번째 정수 : <input type="text" id="x" size="14" /><br /><br />
+      두번째 정수 : <input type="text" id="y" size="14" /><br /><br />
+      합계 : <input type="text" id="sum" size="20" />
+      <hr />
+      <input type="button" value="계산" onclick="calc()" />
+      <!-- onclick은 클릭 이벤트를 처리하는 이벤트 핸들러로 calc()자바스크립트 함수를 호출한다 -->
+    </form>
+  </body>
+</html>

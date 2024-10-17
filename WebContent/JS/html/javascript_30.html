@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>
+      홍길동이 보궐선거 투표에 참여하는 것을<br />
+      찬성합니까?(자바스크립트 confirm()내장함수 실습에)
+    </h2>
+
+    <script>
+      let answer = ask('찬성하면 확인, 반대하면 취소 버튼을 클릭하세요!');
+      document.write('<h3>' + answer + '</h3><hr/>');
+
+      function ask(question) {
+        let ans;
+        ans = window.confirm(question);
+        // confirm() 자바스크립트 내장함수는 확인/취소 버튼을 가진 윈도우 창을 생성
+        // 확인시 true, 취소시 false 반환
+
+        if (ans == true) {
+          return '찬성';
+        } else {
+          return '반대';
+        }
+      }
+    </script>
+  </body>
+</html>

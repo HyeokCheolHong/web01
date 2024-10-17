@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write('<h3>자바스크립트 for~in 루프반복문</h3>');
+
+      let myCar = {make: 'BMW', model: 'X5', year: 2024};
+      // myCar 라는 객체타입을 정의하면서 이 객체 하위의 3가지 속성을 정의하고 속성값 초기화
+      let result = '';
+      // 속성값을 누적해서 저장할 변수 정의
+
+      // for~in 루프 반복문
+      for (let x in myCar) {
+        alert(x);
+        result += myCar[x] + '<br>';
+      }
+      document.write(result); // for~in 루프를 통해 myCar 객체의 3가지 속성값을 alert()로 출력
+    </script>
+  </body>
+</html>

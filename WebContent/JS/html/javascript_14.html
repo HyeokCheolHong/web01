@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="text_change">버튼 클릭하면 글자색이 변경됩니다.</h1>
+    <script>
+      function changeColor() {
+        var e = document.getElementById('text_change');
+        if (e.style.color == 'red') {
+          e.style.color = 'black';
+        } else {
+          e.style.color = 'red';
+        }
+      }
+    </script>
+    <button type="button" onclick="changeColor()">글자색 변경</button>
+  </body>
+</html>

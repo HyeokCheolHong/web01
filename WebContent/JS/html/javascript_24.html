@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>자바스크립트 배열은 여러개의 자료형을 동시 저장가능</h3>
+    <script>
+      var dataArr = new Array();
+
+      dataArr[0] = 'Seoul';
+      dataArr[1] = 100;
+      dataArr[2] = 99.6;
+      dataArr[3] = true;
+      dataArr[4] = new Date();
+
+      let i;
+      for (i = 0; i < dataArr.length; i++) {
+        document.write(dataArr[i] + '<br/>');
+      }
+    </script>
+  </body>
+</html>

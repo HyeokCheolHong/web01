@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 문제 자바스크립트 이중 for반복문을 사용해서 2단부터 9단까지 구구단 열제목을 출력하고
+      // 다음과 같이 구구단 결과 표테이블을(table) 이용해서 출력되게 해본다
+      // 출력 예) 2단   3단   4단   ...   9단
+      //         2x1=2 3x1=3 ...         9x1=9
+
+      document.write("<table border='1' width='50%'>");
+      document.write('<tr>');
+      for (let i = 1; i < 10; i++) {
+        document.write('<th>' + i + '단</th>');
+      }
+      document.write('</tr>');
+
+      // 여기서 부터 이중for반복문을 사용해서 구구단 내용
+      let result = 0;
+      document.write('<tr>');
+      for (let i = 1; i < 10; i++) {
+        for (let j = 1; j < 10; j++) {
+          result = i * j;
+          document.write('<th>' + i + 'x' + j + '=' + result + '</th>');
+        }
+        document.write('</tr>');
+        document.write('<br/>');
+      }
+      document.write('</table>');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>propt() 내장함수 실습예</h3>
+
+    <script>
+      let a = window.prompt('정수 숫자만 입력', '');
+      let b = prompt('정수 숫자만 입력', '');
+      var result = max(a, b);
+      document.write(a + '와' + b + '중 더 큰 숫자는 = ' + result + '<hr/>');
+
+      function max(a, b) {
+        if (a > b) {
+          return a;
+        } else {
+          return b;
+        }
+      }
+    </script>
+  </body>
+</html>

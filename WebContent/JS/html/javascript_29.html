@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write('<h3>자바스크립트 지역변수와 전역변수, 함수종료</h3>');
+
+      function divide(a, b) {
+        if (b == 0) {
+          return;
+          // 함수종료
+        }
+        return a / b;
+      }
+      var result = divide(9, 0);
+      // 좌측 result변수는 선언만 되고 값이 저장되지 않는다.
+      // 이런 경우 값이 정의되지않아 undefined가 할당된다.
+      document.write('result=' + result + '<hr/>'); // result=undefined
+
+      let sum = 0;
+      // 전역변수
+
+      function add(x, y) {
+        sum = x + y;
+        return sum;
+      }
+      result = add(100, 200);
+      document.write('100 + 200 =' + result + '<hr/>'); // result
+
+      function add2(a, b) {
+        let total = a + b;
+        // 함수내에서 var or let으로 변수를 정의하면 함수 내에서만 사용가능한 지역변수(local variable)가 된다
+        return total;
+      }
+      result = add2(10, 20);
+    </script>
+  </body>
+</html>

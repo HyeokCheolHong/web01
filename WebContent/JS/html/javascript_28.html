@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let greet = function () {
+        alert('무명함수 호출');
+      };
+      greet();
+
+      function show() {
+        alert('show() 함수 호출');
+        name = 'var이나 let없이 변수에 값만 대입하면 전역변수가 된다.';
+      }
+      show();
+      document.write(name);
+      // name이 전역변수(global varialbe)이므로 사용 가능하다.
+
+      function end() {
+        document.write('<hr/>' + name);
+        // 전역변수라서 다른함수에서 사용가능
+      }
+      end();
+    </script>
+  </body>
+</html>

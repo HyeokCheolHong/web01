@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if else if 다중 조건문</title>
+  </head>
+  <body>
+    <script>
+      let msg;
+      var time = new Date().getHours();
+      // Date는 자바스크립트 날짜 내장객체이다.
+      // 이 객체 하위의 getHours()메서드는 현재 컴퓨터의 시간을 반환
+
+      if (time < 12) {
+        msg = 'Good Morning';
+      } else if (time < 18) {
+        msg = 'Good Afternoon';
+      } else {
+        msg = 'Good Evening';
+      }
+
+      alert(msg);
+    </script>
+  </body>
+</html>
