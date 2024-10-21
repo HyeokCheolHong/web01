@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트에서 try~catch 예외처리문</title>
+  </head>
+  <body>
+    <form action="#">
+      <button type="button" onclick="errorTest();">try~catch문</button>
+    </form>
+
+    <script>
+      let msg = '';
+      // 예외 에러 메시지를 저장할 변수
+      function errorTest() {
+        try {
+          alert('try~catch문 예외 에러 연습');
+        } catch (error) {
+          msg = '예외 발생: ' + error.message;
+          alert(msg);
+        }
+      }
+    </script>
+  </body>
+</html>

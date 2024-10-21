@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 Array 배열 내장객체하위의 메소드</title>
+  </head>
+  <body>
+    <script>
+      let x = [10, 20, 30];
+      let y = [40, 50, 60];
+      let result = x.concat(y);
+      // Array배열 내장객체의 concat()메서드는 x배열원소 끝에 y배열원소 값 추가
+
+      document.write(x + '<hr/>');
+      document.write(result + '<hr/>');
+
+      let fruits = ['apple', 'banana', 'grape', 'orange'];
+      document.write(fruits.indexOf('banana') + '<br/>');
+    </script>
+  </body>
+</html>

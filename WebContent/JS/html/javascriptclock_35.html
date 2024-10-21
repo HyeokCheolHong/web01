@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>시계동작</h2>
+    <button type="button" onclick="clock_movement();">시계동작</button>
+    <input type="text" value="시계멈춤" onclick="clock_stop" />
+    <hr />
+    시계동작값 출력:
+    <input type="text" id="clock" size="50" style="color: red" />
+
+    <script>
+      let clock_area;
+
+      function clock_movement() {
+        let today = new Date();
+        let year = today.getFullYear();
+        let month = today.getMonth() + 1;
+        let date = today.getDate();
+        let hours = today.getHours();
+        let minutes = today.getMinutes();
+        let seconds = today.getSeconds();
+
+        document.getElementById('clock').value =
+          year +
+          ' 년 ' +
+          month +
+          ' 월 ' +
+          date +
+          ' 일 ' +
+          hours +
+          ' 시 ' +
+          minutes +
+          ' 분 ' +
+          seconds +
+          ' 초 입니다';
+
+        clock_area = window.setTimeout('clock_movement()', 1000);
+        // 1초 간격으로 매번 clock_movement()함수 호출하여 동작하는 시간값을 clock_area 저장
+      }
+
+      function clock_stop() {
+        window.clearTimeout(clock_area);
+      }
+    </script>
+  </body>
+</html>

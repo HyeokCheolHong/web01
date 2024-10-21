@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 Array배열 내장객체</title>
+  </head>
+  <body>
+    <script>
+      function printArray(arr) {
+        document.write('[');
+        for (let i = 0; i < arr.length; i++) {
+          document.write(arr[i]);
+        }
+        document.write(']' + '<hr/>');
+      }
+
+      let myArr01 = new Array();
+      myArr01[0] = 'apple';
+      myArr01[1] = 100;
+      myArr01[2] = 10.3;
+      myArr01.push(40);
+      myArr01.unshift('banana');
+      // 배열 맨앞에 삽입
+      myArr01.push('민중이바보');
+      myArr01.push('민중이는 TB조 기술이사');
+
+      printArray(myArr01);
+
+      var myArr02 = new Array('Apple', 'Grape', 'Orange');
+      printArray(myArr02);
+
+      let myArr03 = ['Seoul', 'Busan', 'Incheon'];
+      printArray(myArr03);
+    </script>
+  </body>
+</html>

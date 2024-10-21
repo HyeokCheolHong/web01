@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>자바스크립트 innerHtml 속성에 관한 실습</h1>
+    <div id="ex">여기가 <strong>div로 선언</strong>되었습니다.</div>
+    <a href="#" onclick="get();">div 요소 내용 출력하기</a><br />
+    <a href="#" onclick="set('<h1>변경되었습니다.</h1>');"
+      >div 요소 내용 변경하기</a
+    >
+
+    <script>
+      function get() {
+        let val = document.getElementById('ex').innerHTML;
+        // innerHTML 속성으로 ex아이디 영역의 태그와 문자를 함께 가져옴
+        alert(val);
+      }
+
+      function set(str) {
+        document.getElementById('ex').innerHTML = str;
+        // ex아이디 영역에 태그와 문자를 함께 변경 적용
+      }
+
+      // onclick 이 이벤트 핸들러에서 get() 함수 호출
+      // get() 함수는 ex.innerHTML 값을 alert()로 출력
+    </script>
+  </body>
+</html>

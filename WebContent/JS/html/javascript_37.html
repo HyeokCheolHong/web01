@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>화면 배경색이 변경됩니다.</h2>
+    <input type="button" value="배경색변경" onclick="changeColor();" />
+    <input type="button" value="배경색 변경중지" onclick="changeStop();" />
+
+    <script>
+      let color = new Array('gold', 'red', 'green', 'yellow', 'blue', 'orange');
+
+      function changeColor() {
+        let t = new Date();
+        let s = t.getSeconds();
+        let na = s % 6;
+
+        document.bgColor = color[na];
+        // 본문 배경색 변경
+
+        area = setTimeout('changeColor', 1000);
+      }
+
+      function changeStop() {
+        clearTimeout(area);
+        // changeColor() 함수 취소
+      }
+    </script>
+  </body>
+</html>

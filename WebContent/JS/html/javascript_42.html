@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onLoad="scro();">
+    <h2>지나가는 뉴스가 수평으로 스크롤 되는 예제</h2>
+
+    <form name="myform">
+      <input type="text" name="news" size="200" />
+    </form>
+
+    <script>
+      let str, n, i; // 전역변수 3개 정의
+
+      function scro() {
+        str =
+          '뉴스 속보를 알려드리겠습니다. 오늘은 아침 최저 기온이 올해 가을 중 가장 낮습니다. 건강 관리에 유의하시길 바랍니다.';
+        i = 0;
+        n = str.length; // 문자 길이
+        scro2(); // scro2() 함수 호출
+      }
+
+      function scro2() {
+        document.myform.news.value = str.substring(0, i); // 0이상 i미만 사이의 뉴스 문자를 추출해서 입력필드에 표시
+        i++;
+
+        if (i > n) {
+          i = 0; // 다시 처음부터 반복
+        }
+        setTimeout('scro2()', 100);
+      }
+    </script>
+  </body>
+</html>

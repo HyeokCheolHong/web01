@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 숨김/보임</title>
+  </head>
+  <body>
+    <h2 id="heading">이것은 헤딩입니다.</h2>
+    <input
+      type="button"
+      value="요소숨김"
+      onclick="document.getElementById('heading').style.visibility = 'hidden';"
+    />
+    <!-- 자리는 차지하되 사용자 시야에서 안보임 -->
+    <input
+      type="button"
+      value="요소보임"
+      onclick="document.getElementById('heading').style.visibility = 'visible';"
+    />
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID 길이 유효성 검사(Validate)</title>
+  </head>
+  <body>
+    <form action="#">
+      아이디 : <input type="text" id="id" size="18" />
+      <input type="button" value="ID길이 유효성 체크" onclick="checkId()" />
+    </form>
+
+    <script>
+      function checkId() {
+        let id_length = document.getElementById('id').value;
+        alert(id_length.length);
+
+        if (id_length.length < 6) {
+          alert('ID는 6글자 이상이어야 합니다.');
+        }
+      }
+    </script>
+  </body>
+</html>

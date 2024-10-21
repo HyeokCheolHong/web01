@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 throw키워로 인위적 예외발생</title>
+  </head>
+  <body>
+    <h1>숫자 추측</h1>
+    <p>1부터 100사이의 숫자를 입력하시오</p>
+    <input type="text" id="number" size="10" />
+    <input type="button" value="숫자추측" onclick="guessNumber();" />
+    <p id="message"></p>
+
+    <script>
+      let number = 63;
+      function guessNumber() {
+        try {
+          let x = parseInt(document.getElementById('number').value);
+
+          if (x == '') throw '입력 없음';
+          // throw 키워드에 의해서 인위적 예외가 발생
+          if (x == NaN) throw '숫자가 아님';
+          if (x < number) throw '입력한 숫자가 더큼';
+          if (x > numbeR) throw '입력한 숫자가 더 작음';
+          if (x == number) throw '정답입니다';
+        } catch (error) {
+          let yMessage = document.getElementById('message');
+          yMessage.innerHTML = '힌트 : <strong>' + error + '</strong>';
+          // innerHTML 속성은 문자와 태그를 함께 변경 적용
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var s = 'This is a test.';
+
+      document.write('Big : ' + s.big() + '<br>');
+      document.write('Small : ' + s.small() + '<br>');
+      document.write('Bold : ' + s.bold() + '<br>');
+      document.write('Italic : ' + s.italics() + '<br>');
+      document.write('strike : ' + s.strike() + '<br>');
+      document.write('fontcolor : ' + s.fontcolor('green') + '<br>');
+      document.write('fontsize : ' + s.fontsize(6) + '<br>');
+      document.write('아래첨자 : ' + s.sub() + '<br>');
+      document.write('위첨자 : ' + s.sup() + '<br>');
+      document.write(
+        '하이퍼링크 : ' + s.link('http://www.google.co.kr') + '<br>'
+      );
+    </script>
+  </body>
+</html>

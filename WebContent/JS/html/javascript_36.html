@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="change()">
+    <!-- onload 이벤트는 웹페이지 시작과 동시에 발생 -->
+    <h2>1초 간격으로 본문 배경색이 변경되는 예제</h2>
+
+    <script>
+      function change() {
+        let today = new Date();
+        let second = today.getSeconds();
+        let rest = second % 6;
+
+        if (rest == 0) {
+          document.bgColor = 'gold';
+        } else if (rest == 1) {
+          document.bgColor = 'orange';
+        } else if (rest == 2) {
+          document.bgColor = 'red';
+        } else if (rest == 3) {
+          document.bgColor = 'yellow';
+        } else if (rest == 4) {
+          document.bgColor = 'green';
+        } else {
+          document.bgColor = 'blue';
+        }
+
+        setTimeout('change()', 1000);
+      }
+    </script>
+  </body>
+</html>

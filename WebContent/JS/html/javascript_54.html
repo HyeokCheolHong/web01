@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p01">THis is a paragraph</p>
+    <button type="button" onclick="changeStyle_1();">요소 스타일 변경</button>
+    <button type="button" onclick="changeStyle_2();">요소 스타일 변경</button>
+
+    <script>
+      function changeStyle_1() {
+        document.getElementById('p01').style.color = 'red';
+        document.getElementById('p01').style.fontSize = '24px';
+        document.getElementById('p02').style.fontFamily = 'sans-serif';
+        document.getElementById('p02').style.fontWeight = 'bold';
+        document.getElementById('p02').style.textDecoration = 'underline';
+        document.getElementById('p02').style.fontstyle = 'italic';
+      }
+      function changeStyle_2() {
+        document.getElementById('p01').style.color = 'black';
+        document.getElementById('p01').style.fontSize = '12px';
+        document.getElementById('p02').style.fontFamily = 'ansansans';
+        document.getElementById('p02').style.fontWeight = 'default';
+        document.getElementById('p02').style.textDecoration = 'line';
+        document.getElementById('p02').style.fontstyle = 'antialiased';
+      }
+    </script>
+  </body>
+</html>

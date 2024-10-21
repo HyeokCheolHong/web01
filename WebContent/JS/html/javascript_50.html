@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>자바스크립트로 입력필드 입력값 가져오기</h2>
+    <form action="#">
+      주소 : <input type="text" id="addr" size="36" />
+      <input type="button" value="제출" onclick="check();" />
+    </form>
+    <!-- 여기까지 id로 입력값 가져오기 -->
+
+    <form action="#">
+      이름 : <input type="text" name="text01" size="14" />
+      <input type="button" value="제출" onclick="process();" />
+    </form>
+
+    <script>
+      function check() {
+        // let address = document.getElementById('addr').value;
+        // alert(address);
+
+        let address = document.getElementById('addr');
+        alert(address.value);
+
+        alert(document.getElementById('addr').value);
+
+        let addrValue = document.getElementById('addr').value;
+        document.write('주소 : <b>' + addrValue + '</b>');
+      }
+      // 여기까지 id를 통해서 가져오기
+
+      function process() {
+        let name = document.myform.text01;
+        alert(name.value);
+
+        window.alert(myform.text01.value);
+      }
+    </script>
+  </body>
+</html>

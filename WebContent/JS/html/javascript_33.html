@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>자바스크립트 내장함수 confirm()</h2>
+    <script>
+      function process(message) {
+        alert(message);
+      }
+
+      let result = confirm('게임 한판 ㄱ?');
+      // 확인/취소 버튼을 가진 윈도우창을 뛰움
+      // 확인시 true, 취소시 false를 반환
+
+      if (result == true) {
+        process('게임을 시작합니다.');
+      } else {
+        process('나중에');
+      }
+    </script>
+  </body>
+</html>

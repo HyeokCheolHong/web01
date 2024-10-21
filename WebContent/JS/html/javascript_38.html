@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = 'javascript';
+
+      document.write('문자열 길이: ' + str.length + '<hr/>');
+      document.write("문자열 'a'의 위치: " + str.indexOf('a') + '<hr/>');
+      // 첫문자는 0부터 카운터
+      document.write(
+        "문자열 'a'의 위치(from right): " + str.lastIndexOf('a') + '<hr/>'
+      );
+      // 오른쪽에서 부터 카운터
+      document.write(
+        '2이상 4미만의 문자 반환 :' + str.substring(2, 4) + '<hr/>'
+      );
+      document.write(
+        '2이후부터 마지막문자까지 문자 반환 :' + str.substring(2) + '<hr/>'
+      );
+      document.write(
+        "문자열 'java'를 '자바'로 바꾸기: " +
+          str.replace('java', '자바') +
+          '<hr/>'
+      );
+    </script>
+  </body>
+</html>

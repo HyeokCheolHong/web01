@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript 배열내장 객체 하위의 메서드</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [1, 2, 3, 4, 5];
+
+      numbers.push(6);
+      // numbers배열원소 값 끝에 6 추가
+      document.write(numbers + '<hr/>');
+
+      let item = numbers.pop();
+      // 배열원소 마지막 값을 제거하면서 반환
+      document.write('item=' + item + '<hr/>'); // 6
+      document.write('numbers=' + numbers + '<hr/>'); // 1,2,3,4,5
+
+      let item2 = numbers.shift();
+      // 첫번째 배열원소값을 제거하면서 반환
+      document.write('item2=' + item2 + '<hr/>'); // 1
+      document.write('numbers=' + numbers + '<hr/>'); // 2,3,4,5
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>생성자 함수를 통해서 사용자 정의 객체</title>
+    <script>
+      function Car(model, speed, color) {
+        this.model = model;
+        this.speed = speed;
+        this.color = color;
+        this.brake = function () {
+          this.speed -= 10;
+        };
+
+        this.accel = function () {
+          this.speed += 10;
+        };
+      }
+
+      let myCar = new Car('Tesla Model S', 60, 'Red');
+      // myCar 객체 생성
+      document.write('Model :' + myCar.model + '<br/>');
+      document.write('Speed :' + myCar.speed + '<br/>');
+      document.write('Color :' + myCar.color + '<br/>');
+      myCar.accel();
+      document.write('Speed after accel :' + myCar.speed + '<br/>');
+      myCar.brake();
+      document.write('Speed after brake :' + myCar.speed + '<br/>');
+    </script>
+  </head>
+  <body></body>
+</html>
