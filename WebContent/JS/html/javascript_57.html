@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>자바스크립트 location객체에 대한 실습</h2>
+    <form action="#">
+      <input
+        type="button"
+        value="네이버로 이동"
+        onclick="window.location.href='http://www.naver.com';"
+      />
+      <input type="button" value="구글로 이동" onclick="url();" />
+      <button type="button" onclick="url2('http://www.nate.com');">
+        네이트로 이동
+      </button>
+    </form>
+
+    <script>
+      function url() {
+        location.href = 'http://www.google.com';
+        // location 객체는 원하는 파일 또는 주소로 이동
+      }
+
+      function url2(link) {
+        location = link;
+      }
+    </script>
+  </body>
+</html>

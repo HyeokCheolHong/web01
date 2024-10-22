@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="background-color: gray; width: 500px; height: 600px"
+      onmouseover="onMouseIn(this);"
+      onmouseout="onMouseOut(this)"
+    >
+      <h3>마우스를 해당 요소위로 올려놓던지 벗어나 보세요</h3>
+    </div>
+
+    <script>
+      function onMouseIn(elem) {
+        elem.style.border = '2px solid gold';
+      }
+
+      function onMouseOut(elem) {
+        elem.style.border = '';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>mousedown과 mosudeup 이벤트</h3>
+    <button
+      type="button"
+      onmousedown="onButtonDown(this)"
+      onmouseup="onButtonUp(this)"
+    ></button>
+
+    <script>
+      function onButtonDown(btn) {
+        btn.style.color = 'yellow';
+      }
+
+      function onButtonUp(btn) {
+        btn.style.color = 'red';
+      }
+    </script>
+  </body>
+</html>

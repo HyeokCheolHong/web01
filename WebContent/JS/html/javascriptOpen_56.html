@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>새로운 공지창 만들기</title>
+  </head>
+  <body onload="open_win();">
+    <h1>공지창 띄우기</h1>
+    <script>
+      function open_win() {
+        window.open(
+          'event.html',
+          '공지창',
+          'width=350, initial-scale=1.0',
+          'height=420',
+          'scrollbars=yes'
+        );
+        // window.open("event.html", "공지창", "width=350, height=420, menubar=no, toolbar=no, scrollbars=yes, resizable=yes");
+        // 자바스크립트 window객체하위의 내장메서드 open()으로 새로운 공지창만든다
+        // open(공지창 경로 파일명, 공지창이름, 공지창속성) 메서드로 공지창 폭 (사용자 디바이스), 비율 (1:1) 높이 (사용자 디바이스) 스크롤바가 생성
+      }
+    </script>
+  </body>
+</html>

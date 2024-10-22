@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>change 이벤트가 발생해서 입력필드값을 영문소문자로 변경</h3>
+    영어단어 : <input type="text" id="name" onchange="sub()" />
+    <p>입력필드를 벗어나면 영문소문자로 변경</p>
+
+    <script>
+      function sub() {
+        let x = document.getElementById('name');
+        x.value = x.value.toLowerCase();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공지창</title>
+    <style>
+      #gongji_wrap {
+        width: 310px;
+        height: 390px0px;
+        border: 1px solid red;
+        margin: 14px 0 0 14x;
+        border-radius: 15px;
+        box-shadow: 3px 3px 3px gray;
+
+        & .gongi_title {
+          text-align: center;
+        }
+
+        & .gongji_cont {
+          text-align: center;
+          line-height: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gongji_wrap">
+      <h1 class="gongji_title">공지창</h1>
+      <p class="gongji_cont">
+        <button type="button" onclick="self.close();">닫기</button>
+        <!-- 자바스크립트에서 self.close()메서드는 자기 자신 공지창을 닫는다 -->
+      </p>
+    </div>
+  </body>
+</html>
