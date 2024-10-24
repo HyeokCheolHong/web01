@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../JS/js/jquery-3.7.1.min.js"></script>
+    <!-- jQuery 라이브러리를 외부 포함파일로 읽어온다. -->
+    <script>
+      $(document).ready(function () {
+        // $ : jQuery 객체를 의미합니다. jQuery를 $로 쓸 수 있게 해줍니다.
+        // $(document).ready() : HTML 문서 로딩이 종료된 후, ready() 함수를 실행합니다.
+        // jQuery ready() 함수를 이용하여 HTML 요소에 이 비트를 바인드 할 수 있습니다.
+
+        jQuery('h2').click(function () {
+          $(this).hid();
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

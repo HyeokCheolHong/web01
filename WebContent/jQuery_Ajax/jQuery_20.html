@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="div01" style="background-color: blue"></div>
+    <button type="button" id="btn01">css() 함수로 속성값 반환</button>
+    <button type="button" id="btn02">속성값 변경</button>
+    <hr />
+    <p id="result">여기에 배경색 속성값이 출력됩니다</p>
+    <script>
+      $(document).ready(function () {
+        $('#btn01').click(function () {
+          let color = $('#div01').css('background-color');
+          $('#result').html('<strong> 배경색 속성값 : ' + color + ' </strong>');
+          // result id 영역에 css('background-color')로 div01의 background-color를 가져와서 html() 함수로 표시
+        });
+
+        $('#btn02').click(function () {
+          $('#div01').css('background-color', 'green');
+        });
+      });
+    </script>
+  </body>
+</html>

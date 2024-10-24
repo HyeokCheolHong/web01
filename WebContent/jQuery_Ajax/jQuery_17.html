@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h3>jQuery attr()함수를 사용해서 alt속성값 변경</h3>
+    <img
+      id="dog"
+      src="../images/dog-test.jpg"
+      alt="강아지"
+      width="200"
+      height="150"
+    />
+    <hr />
+    <button type="button" id="attr_btn">alt속성값 변경</button>
+
+    <script>
+      $(document).ready(function () {
+        $('#attr_btn').click(function () {
+          $('#dog').attr('alt', '변경된 강아지');
+        });
+      });
+    </script>
+  </body>
+</html>

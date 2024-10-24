@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h3>jQuery attr()함수를 사용해서 src 속성값을 가져옴</h3>
+    <img
+      src="../images/coffee.jpg"
+      alt="커피 사진"
+      id="coffee"
+      width="150"
+      height="135"
+    />
+    <hr />
+    <button type="button" class="btn_coffee">attr()</button>
+
+    <script>
+      $(document).ready(function () {
+        $('.btn_coffee').click(function () {
+          alert(jQuery('#coffee').attr('src'));
+        });
+      });
+    </script>
+  </body>
+</html>

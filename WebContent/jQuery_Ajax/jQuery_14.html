@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h3>jQuery val()</h3>
+    <form action="#">
+      이름 : <input type="text" id="name" size="16" required />
+      <button type="button" id="btn_name">val()</button>
+    </form>
+
+    <script>
+      $(document).ready(function () {
+        $('#btn_name').click(function () {
+          alert($('#name').val());
+          // jQuery val() 함수로 name input 요소의 value 값을 가져온다
+        });
+      });
+    </script>
+  </body>
+</html>

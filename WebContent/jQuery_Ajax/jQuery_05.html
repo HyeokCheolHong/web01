@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h3>jQuery show()함수</h3>
+    <button type="button">Show Image</button>
+    <img
+      src="../images/dog.jpg"
+      alt="강아지"
+      id="dog"
+      width="200"
+      height="180"
+      style="display: none"
+    />
+
+    <script>
+      $(document).ready(function () {
+        $('button').click(function () {
+          $('#dog').show('slow');
+        });
+      });
+    </script>
+  </body>
+</html>

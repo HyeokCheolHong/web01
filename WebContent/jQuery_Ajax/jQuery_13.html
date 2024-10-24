@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <p id="result">이 부분이 변경 적용</p>
+    <input type="button" value="text()" id="text" />
+    <input type="button" value="text()" id="html" />
+
+    <script>
+      $(document).ready(function () {
+        $('#text').click(function () {
+          $('#result').text('Hello, jQuery!');
+          // result 아이디 요소의 문자가 변경
+        });
+
+        $('#html').click(function () {
+          $('#result').html(
+            "<font size='14' color='gold'>이 부분 태그와 문자가 변경 적용</font>"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

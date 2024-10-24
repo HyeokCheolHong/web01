@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 라이브러리 CDN방식</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- jquery 사이트에서 공식으로 사용하는 최신소스이다.
+    새로운 버전이 나오면 자동으로 업데이트 되기에 테스트 사이트에서 가볍게 쓰기에 용이하다. -->
+    <!-- https://letsplaycoding.tistory.com/31 -->
+    <!-- jQuery CDN(Content Delivery Network의 약자)방식은 jQuery 라이브러리를 인터넷 온라인으로 연결해서 사용하는 경우 -->
+
+    <style>
+      div.out {
+        width: 300px;
+        height: 200px;
+        border: 2px solid red;
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="out">
+      <p>마우스를 여기로 움직이세요</p>
+      <p>0</p>
+    </div>
+
+    <script>
+      $i = 0;
+      // $i : jQuery 객체를 의미합니다. jQuery를 $로 쓸 수 있게 해줍니다.
+
+      $('div.out').mouseover(function () {
+        // div.out : class="out"을 가진 div에 마우스 hover했을때
+
+        $('p:first', this).text('mouse over 했다');
+        // p:first : p태그 중에서 첫번째 p태그를 선택합니다.
+        // jQuery text()함수에 의해서 p태그 첫번째 요소 문자를 변경한다.
+
+        $('p:last', this).text(++$i); // p:last : p태그 중에서 마지막 p태그를 선택합니다.
+      });
+    </script>
+  </body>
+</html>

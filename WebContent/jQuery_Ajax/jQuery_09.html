@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h3>jQuery fadInI() fadeOut()함수</h3>
+    <button type="button" id="fadeIn">fadeIn()</button>
+    <button type="button" id="fadeOut">fadeOut()</button>
+    <hr />
+    <img
+      src="../images/fruit03.jpg"
+      alt="과일사진"
+      id="red_cherry"
+      width="300"
+      height="250"
+      style="display: none; position: relative"
+    />
+
+    <script>
+      $(document).ready(function () {
+        $('#fadeIn').click(function () {
+          $('#red_cherry').fadeIn('slow'); // 1000ms = 1sec
+        });
+
+        $('#fadeOut').click(function () {
+          $('#red_cherry').fadeOut('slow'); // 1000ms = 1sec
+        });
+      });
+    </script>
+  </body>
+</html>

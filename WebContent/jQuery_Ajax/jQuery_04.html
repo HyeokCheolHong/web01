@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+      body {
+        background-color: #eef;
+      }
+      div {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>마우스 움직이는 이벤트가 발생하면 div요소에 x, y 좌표 값 출력</h3>
+    <div id="log"></div>
+    <script>
+      $(document).mousemove(function (event) {
+        $('#log').text('X:' + event.pageX + ', Y:' + event.pageY);
+      });
+    </script>
+  </body>
+</html>

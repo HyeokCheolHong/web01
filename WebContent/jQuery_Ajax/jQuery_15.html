@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h3>jQuery val()함수에 인자값이 있어서 입력필드 값을 변경</h3>
+    <form action="#">
+      <input type="button" value="val()" id="addr_btn" />
+      <hr />
+      주소 :
+      <input
+        type="text"
+        id="addr"
+        size="30"
+        placeholder="주소를 입력해주세요"
+      />
+    </form>
+
+    <script>
+      $(document).ready(function () {
+        $('#addr_btn').click(function () {
+          $('#addr').val('주소를 다시 입력하세요!');
+          // val()함수에 인자값이 있으면 해당 필드값을 변경
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h2>jQuery toggle() 함수</h2>
+    <input type="button" value="복숭아 보기" id="fruit" />
+    <hr />
+    <img
+      src="../images/fruit01.jpg"
+      alt="복숭아"
+      id="fruit_image"
+      width="200"
+      height="180"
+      style="display: none"
+    />
+
+    <script>
+      $(document).ready(function () {
+        $('#fruit').click(function () {
+          $('#fruit_image').toggle('slow');
+          // jQuery toggle() 함수를 사용하면 display: none;과 display: block;을 번갈아가며 적용할 수 있다.
+        });
+      });
+    </script>
+  </body>
+</html>

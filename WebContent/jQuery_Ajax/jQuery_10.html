@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h3>jQuery slideDown()과 slideUp() 함수</h3>
+    <img
+      src="../images/cat.jpg"
+      alt="고양이"
+      id="cat"
+      width="200"
+      height="200"
+      style="display: none; position: relative"
+    />
+    <hr />
+    <input type="button" value="slideDown" id="slideDown" />
+    <input type="button" value="slideUp" id="slideUp" />
+
+    <script>
+      $(document).ready(function () {
+        jQuery('#slideDown').click(function () {
+          $('#cat').slideDown('slow');
+        });
+
+        jQuery('#slideUp').click(function () {
+          $('#cat').slideUp('slow');
+        });
+      });
+    </script>
+  </body>
+</html>

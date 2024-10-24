@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <img
+      src="../images/cat.jpg"
+      alt="고양이"
+      id="cat"
+      width="150"
+      height="120"
+      style="position: relative"
+    />
+    <button type="button">animate()클릭시 이미지 위치 이동</button>
+
+    <script>
+      $(document).ready(function () {
+        $('button').click(function () {
+          $('#cat').animate({
+            left: '250px',
+            // 왼쪽에서 오른쪽으로 이동
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

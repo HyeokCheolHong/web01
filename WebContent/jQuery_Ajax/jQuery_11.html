@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h3>jQuery 함수 메서드 체이닝법</h3>
+    <button type="button" id="red_cherry">메서드 체이닝</button>
+    <hr />
+    <img
+      src="../images/fruit03.jpg"
+      alt="체리"
+      id="cherry"
+      width="300"
+      height="300"
+      style="display: none; position: relative"
+    />
+
+    <script>
+      $(document).ready(function () {
+        $('#red_cherry').click(function () {
+          $('#cherry').show().fadeOut('slow').slideDown('slow');
+          // 한줄로 jQuery함수 3개를 나열해서 사용하는 메서드 체이닝 방법
+          // show() : 요소를 보이게 한다.
+          // fadeOut() : 요소를 fadeOut시 사라지게 만든다.
+          // slideDown() : 요소를 slideDown시 밀어내린다.
+          // show() -> fadeOut() -> slideDown() 동작 순으로 chaining
+        });
+      });
+    </script>
+  </body>
+</html>

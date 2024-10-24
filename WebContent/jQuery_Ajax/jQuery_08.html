@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <img
+      src="../images/fruit02.jpg"
+      alt="과일사진"
+      id="apple"
+      width="100"
+      height="150"
+      style="position: relative"
+    />
+    <hr />
+    <input type="button" value="animate()함수" id="btn" />
+
+    <script>
+      $(document).ready(function () {
+        $('#btn').click(function () {
+          $('#apple').animate({
+            left: '200px',
+            opacity: '0.5',
+            width: '250px',
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

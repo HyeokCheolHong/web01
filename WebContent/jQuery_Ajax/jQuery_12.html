@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <h3>jQuery text() vs. html() 함수</h3>
+    <p id="target">이것은 <strong>하나의</strong> 단락입니다.</p>
+    <button type="button" id="text">text()</button>
+    <button type="button" id="html">html()</button>
+
+    <script>
+      $(document).ready(function () {
+        $('#text').click(function () {
+          alert($('#target').text());
+          // jQuery text()함수로 target 아이디 요소의 텍스트를 가져온다
+        });
+
+        $('#html').click(function () {
+          alert($('#target').html());
+          // jQuery html()함수로 target 아이디 요소의 태그와 문자를 함께 가져온다
+        });
+      });
+    </script>
+  </body>
+</html>
