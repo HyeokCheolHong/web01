@@ -1,0 +1,68 @@
+#page{
+  width: 960px;
+  padding: 5px;
+  margin: 20px auto;
+}
+
+#header{
+  height: 50px;
+}
+
+#main{
+  width: 600px;
+  float: left;
+}
+
+#sidebar{
+  width: 300px;
+  float: right;
+}
+
+#footer{
+  clear:both;
+  /* float속성을 제거해서 footer영역이 위쪽 빈공백으로 올라가서 UI 깨지는 현상을 막아준다 */
+}
+
+@media screen and (max-width:980px){
+  /* 미디어 타입이 스크린(화면)이고 최대 너비가 980픽셀이면 */
+  #page {
+    width: 94%;
+  }
+  #main{
+    width: 65%;
+  }
+  #sidebar{
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  #main{
+    width: auto;
+    float: none;
+  }
+  #sidebar{
+    width: auto;
+    float: none;
+  } 
+}
+
+#header, #main, #sidebar, #footer {
+  border: 1px solid red;
+}
+
+#header {
+  background-color: yellow;
+}
+
+#main {
+  background-color: aliceblue;
+}
+
+#sidebar {
+  background-color: aqua;
+}
+
+#footer {
+  background-color: coral;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 비동기 Ajax의 load()함수</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+      div {
+        width: 180px;
+        height: 80px;
+        margin: 3px;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="#" id="menu01">메뉴보기 01</a>
+      <hr />
+      <span id="result01"></span>
+    </div>
+    <div>
+      <button type="button" id="menu02">메뉴보기 02</button>
+      <hr />
+      <span id="result02"></span>
+    </div>
+    <div>
+      <button type="button" id="menu03">메뉴보기 03</button>
+      <hr />
+      <span id="result03"></span>
+    </div>
+    <div>
+      <button type="button" class="menu04">메뉴보기 04</button>
+      <hr />
+      <span class="result04"></span>
+    </div>
+
+    <script>
+      $(function () {
+        $('#menu01').click(function () {
+          $('#result01').load('menu.html');
+          // 비동기식 jQuery Ajax load()함수로 menu.html 파일을 로드해서 읽어옴
+          return false;
+        });
+
+        $('#menu02').click(function () {
+          $('#result02').load('menu.html li');
+          // 비동기식 jQuery Ajax load()함수로 menu.html 파일의 li태그만 읽어옴
+          return false;
+        });
+      });
+
+      $(function () {
+        $('#menu03').click(function () {
+          $.ajax({
+            url: 'menu.html',
+            // Ajax로 읽어올 파일 경로
+            dataType: 'html',
+            // 받아오는 자료형식
+            success: function (data) {
+              // 비동기식 Ajax로 받아오는 것이 성공시 호출되는 콜백함수
+              // 받아온 데이터는 data 매개변수에 저장됨
+              $('#result03').html(data);
+              // result id 영역에 html() 함수로 data를 표시
+            },
+          });
+          return false;
+        });
+
+        $('.menu04').click(function () {
+          $.ajax({
+            url: 'menu.html',
+            dataType: 'html',
+            success: function (data) {
+              $('.result04').html($(data).find('li'));
+              // jQuery find()함수로 menu.html에서 li태그 요소만
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<!-- <?xml version="1.0" encoding="UTF-8?> -->
+<items>
+  <item id="1" name="멜론">
+    <price>5000</price>
+    <des>멜론에는 비타인 A와 칼륨이 많이 포함되어있다 </des>
+  </item>
+
+  <item id="2" name="수박">
+    <price>15000</price>
+    <des>수박은 수분이 풍부한 과일이다.</des>
+  </item>
+</items>

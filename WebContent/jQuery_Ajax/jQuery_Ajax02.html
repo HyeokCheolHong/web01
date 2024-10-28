@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비동기식 jQuery Ajax $.getJSON() 함수</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+      table,
+      th {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="result"></table>
+    <!-- 표테이블에 비동기식으로 가져온 JSON key-value 값 쌍으로 데이터가 출력 -->
+
+    <script>
+      $(function () {
+        $.getJSON('item.json', function (data, textStatus) {
+          // 비동기식 get방식으로 가져온 json데이터는 data매개변수에 저장됨
+          // textStatus 매개변수에는 "success"가 저장됨
+
+          $('#result').append(
+            // jQuery appen()함수로 기존 내용은 유지하며 끝에 내용추가
+            '<tr><th>번호</th> <th>과일이름</th> <th>가격</th> <th>설명</th></tr>'
+          );
+
+          $.each(data, function (key, value) {
+            // jQuery each()함수로 json 데이터의 key-value 값을 반복
+            $('#result').append(
+              '<tr>' +
+                '<th>' +
+                value.id +
+                '</th>' +
+                '<th>' +
+                value.name +
+                '</th>' +
+                '<th>' +
+                value.price +
+                '</th>' +
+                '<th>' +
+                value.des +
+                '</th>' +
+                '</tr>'
+            );
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

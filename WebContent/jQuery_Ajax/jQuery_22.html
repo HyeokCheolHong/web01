@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=                                                                                                                                                                                      , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+      div {
+        width: 70px;
+        height: 50px;
+        float: left;
+        /* 복수개의 div 수직정렬을 수평정렬로 배치 */
+        margin: 5px;
+        background: gold;
+      }
+
+      .next {
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <script>
+      $(document).ready(function () {
+        $modiWidth = 50;
+
+        $('div').click(function () {
+          $(this).width($modiWidth).addClass('next');
+          $modiWidth -= -5;
+        });
+      });
+    </script>
+  </body>
+</html>

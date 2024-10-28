@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비동기식 $.post jQuery Ajax함수</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <form action="#">
+      <label for="nickname">이름 입력:</label>
+      <input type="text" class="name" size="14" id="nickname" /><br /><br />
+      <input type="button" id="submit" value="전송" />
+    </form>
+    <hr />
+    <div id="message"></div>
+
+    <script>
+      $(function () {
+        $('#submit').click(function () {
+          $username = $('.name').val();
+          // 입력필드 값을 가져온다
+          $sendData = 'name2=' + $username;
+          // name2 파라미터 이름에 값을 담아서 전달
+
+          $.post(
+            'result.jsp',
+            // 서버파일 경로
+            $sendData,
+            // 보낼자료 => name2=전달될값
+            function (data) {
+              $('#message').html(data);
+              // message id 아이디 영역에 html()함수로 data매개변수에 저장된 태그와 문자를 함께 변경적용
+            }
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

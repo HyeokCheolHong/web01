@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xml파일을 비동기식 jQuery Ajax $.get()</title>
+    <style>
+      table,
+      th {
+        border: 1px solid gray;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <table id="result"></table>
+
+    <script>
+      $(function () {
+        $.get('item.xml', function (data) {
+          // get방식 비동기식 Ajax로 가져온 xml데이터를 data 매개변수에 저장
+          $('#result').append(
+            '<tr><th>id</th><th>name</th><th>price</th><th>des</th></tr>'
+          );
+          $(data)
+            .find('item')
+            .each(function () {
+              // data매개변수에서 find()함수로 item태그를 찾아 each()함수로 반복
+              $item = $(this);
+              $('#result').append(
+                '<tr>' +
+                  '<th>' +
+                  $item.attr('id') +
+                  '</th><th>' +
+                  $item.attr('name') +
+                  '</th><th>' +
+                  $item.find('price').text() +
+                  '</th><th>' +
+                  $item.find('des').text() +
+                  '</th>' +
+                  '</tr>'
+                // attr("id") 함수는 id 속성값을 가져옴
+              );
+
+              // AI
+              // var id = $(this).find('id').text();
+              // var name = $(this).find('name').text();
+              // var price = $(this).find('price').text();
+              // var des = $(this).find('des').text();
+              // $('#result').append(
+              //   `<tr><td>${id}</td><td>${name}</td><td>${price}</td><td>${des}</td></tr>`
+              // );
+            });
+        });
+      });
+    </script>
+  </body>
+</html>

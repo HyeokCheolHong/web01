@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery addClass()함수</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+      .warn {
+        border: 3px solid red;
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div01">
+      <p>예제 단락입니다</p>
+    </div>
+    <hr />
+    <button type="button" id="btn01">addClass()</button>
+
+    <script>
+      $(document).ready(function () {
+        $('#btn01').click(function () {
+          $('#div01').addClass('warn');
+          // jQuery addClass()함수는 warn 클래스 선택자로 지정된 css를 한꺼번에 div01영역에 적용
+        });
+      });
+    </script>
+  </body>
+</html>
