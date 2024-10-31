@@ -32,24 +32,3 @@ console.log("---구분선---");
 (function(a, b) { //선언과 동시에 호출
   console.log(`${a} + ${b} = ${a + b}`);
 }) (200, 300)
-console.log("---구분선---");
-
-// 비동기식 프로그램
-function displayA_Asynchronous_A_1() {
-  console.log('A');
-}
-
-function displayB_Asynchronous_B_1() {
-  setTimeout(() => {
-    console.log('B');
-  }, 2000);
-  // 2초뒤에 실행
-}
-
-function displayC_Asynchronous_C_1() {
-  console.log(`C`);
-}
-
-displayA_Asynchronous_A_1();
-displayB_Asynchronous_B_1();
-displayC_Asynchronous_C_1();
