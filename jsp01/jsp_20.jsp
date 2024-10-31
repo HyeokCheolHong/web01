@@ -1,6 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.Enumeration" %>
-<%@ page import="web.xml" %>
 <!DOCTYPE html>
 <html>
   <head>
