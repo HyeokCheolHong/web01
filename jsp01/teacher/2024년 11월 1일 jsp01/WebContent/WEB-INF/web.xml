@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>jsp01</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- xml 주석문 기호, 초기화 피라미터 설정 -->
+  <context-param>
+   <description>로깅 정보</description>
+   <param-name>logEnabled</param-name> <!-- 피라미터 이름 설정 -->
+   <param-value>true</param-value> <!-- 피라미터 값 설정 -->
+  </context-param>
+  
+  <context-param>
+   <description>디버깅 레벨</description>
+   <param-name>debugLevel</param-name>
+   <param-value>7</param-value>  
+  </context-param>
+  
+  <!-- 해당경로에 파일 없음 에러 404에러코드 처리 -->
+  <error-page> <!-- error-page 태그는 한 개의 에러 페이지를 지정한다. -->
+    <error-code>404</error-code> <!-- 에러 상태 코드 -->
+    <location>/jspFile01/error/error404.jsp</location> <!-- 에러 페이지로 사용할 jsp파일 경로를 지정 -->
+  </error-page>
+  
+  <!-- 서버 내부 에러인 500 발생 => 대부분이 코드 오타 에러 -->
+  <error-page>
+    <error-code>500</error-code>
+    <location>/jspFile01/error/error500.jsp</location>
+  </error-page>
+  
+  <!-- 익셉션 타입별로 에러페이지 지정하는 법 -->
+  <error-page>
+    <exception-type>java.lang.NullPointerException</exception-type>
+    <location>/jspFile01/error/errorNullPointer.jsp</location>    
+  </error-page>
+  
+  <jsp-config>
+   <jsp-property-group>
+     <url-pattern>/jspFile01/*</url-pattern> 
+     <!-- url-pattern은 브라우저 주소창에서 실행되는 주소값인 매핑주소를 의미한다.
+     다른 말로 이야기 하면 url매핑주소이다. 이 부분은 스프링으로 프로젝트 개발할 때 사용하는 용어 개념과 동일하다.
+     /jspFile01/* 의미는  /jspFile01/ 매핑주소 즉 경로 하위의 모든 파일명(*)를
+     의미한다.-->
+     <include-prelude>/jspFile01/include/header.jspf</include-prelude>
+     <!-- url-pattern에 지정한 jsp파일의 앞부분에 삽입할 파일을 지정 -->
+     <include-coda>/jspFile01/include/footer.jsp</include-coda>
+     <!-- url-pattern에 지정한 jsp파일의 뒷부분에 삽입할 파일을 지정 -->
+   </jsp-property-group>
+  </jsp-config>
+</web-app>
+
+
+
+
+
+
+
+
