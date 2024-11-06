@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="util.Cookies" %>
+<%@page import="util.Cookies"%>
 <%
   response.addCookie(Cookies.createCookie("AUTH", "", "/", 0));
   // 쿠키 유효시간을 0으로 설정해서 로그아웃 처리

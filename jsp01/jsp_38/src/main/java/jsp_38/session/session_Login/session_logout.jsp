@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@page import="util.*"%>
 <%
-  Cookies cookies = new Cookies(request);
+  session.invalidate();
+  // 세션만료 -> 세션 로그아웃
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -11,10 +11,9 @@
     <title></title>
   </head>
   <body>
-    <h3>쿠키 읽어오기</h3>  
-    name 쿠키 값 : <%= cookies.getValue("name")%><hr/>
-    <% if(cookies.exists("id")) { %>
-      id 쿠키 값 : <%= cookies.getValue("id") %>
-    <% } %>
+    <h3>세션 로그아웃</h3>  
+    <script>
+      alert('세션 로그아웃 되었습니다');
+    </script>
   </body>
 </html>
