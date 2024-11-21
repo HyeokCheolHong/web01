@@ -56,23 +56,24 @@ dbConnect();
 // app.use(requestTime);
 // // express에 미들웨어 중간함수로 requestTime을 등록
 
-app.get("/", (req, res) => {
-  //루트(/)로 요청했을 때 라우트 경로, /(루트) 경로 get방식을 요청하면 get()함수를 사용
-  //하고, 그 뒤의 콜백함수를 실행((req,res))
+// 2024-11-21 loginRoutes.js 작성이후로 주석처리
+// app.get("/", (req, res) => {
+//   //루트(/)로 요청했을 때 라우트 경로, /(루트) 경로 get방식을 요청하면 get()함수를 사용
+//   //하고, 그 뒤의 콜백함수를 실행((req,res))
 
-  // res.status(200).send("Hello Node!");;//200 정상 응답상태코드,브라우저 화면에 표시
-  //메서드 체이닝
+//   // res.status(200).send("Hello Node!");;//200 정상 응답상태코드,브라우저 화면에 표시
+//   //메서드 체이닝
 
-  //const headers = req.headers; //get요청을 보낼때 요청 헤더에 담긴 내용을 저장
-  //res.send(headers);
-  //res.json({message:"Hello Node!"}); //JSON 키,값 쌍으로 전송
+//   //const headers = req.headers; //get요청을 보낼때 요청 헤더에 담긴 내용을 저장
+//   //res.send(headers);
+//   //res.json({message:"Hello Node!"}); //JSON 키,값 쌍으로 전송
 
-  // const responseText = `Hello Node!\n 요청시간 : ${req.requestTime}`;
-  // res.set("Content-Type", "text/plain");
-  // // 컨텐트 타입을 지정하지 않으면 HTML로 간주한다
-  // // 여기는 텍스트 형태로 인식하게 함.
-  // res.send(responseText);
-});
+//   // const responseText = `Hello Node!\n 요청시간 : ${req.requestTime}`;
+//   // res.set("Content-Type", "text/plain");
+//   // // 컨텐트 타입을 지정하지 않으면 HTML로 간주한다
+//   // // 여기는 텍스트 형태로 인식하게 함.
+//   // res.send(responseText);
+// });
 
 
 //모든 연락처 가져오기
@@ -118,6 +119,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 
+app.use("/", require("./routes/loginRoutes"));
 app.use("/contacts", require("./routes/contactRoutes"));
 //app.use(router);//라우터를 express 미들웨어에 등록
 
